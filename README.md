@@ -210,3 +210,7 @@ const t = [
 ]
 fromDeepEntries(t) // 👉 { a: 'a', b: { c: 'c' } }
 ```
+
+## CHANGE LOG
+- v2.0.0 | 2022-10-12 :
+  - Change folder structure (rm lib folder from release)

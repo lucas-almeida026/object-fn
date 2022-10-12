@@ -1,12 +1,13 @@
 {
   "name": "object-fn-ts",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "map, filter, reduce and other array methods but for objects",
   "main": "./lib/index.js",
   "types": "./lib",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc && copy \"LICENSE\" \"./lib\" && copy \"README.md\" \"./lib\" && sfj ./package.json ./lib/package.json types main files",
+    "release": "npm run build && npm publish"
   },
   "files": [
     "lib",
