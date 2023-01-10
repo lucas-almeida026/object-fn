@@ -212,5 +212,7 @@ fromDeepEntries(t) // 👉 { a: 'a', b: { c: 'c' } }
 ```
 
 ## CHANGE LOG
+- v2.1.0 | 2023-01-10 :
+  - Reexport `objectReduce` fn
 - v2.0.0 | 2022-10-12 :
   - Change folder structure (rm lib folder from release)

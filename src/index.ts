@@ -7,6 +7,7 @@ import objectSome from './object.some'
 import objectIs from './object.is'
 import objectLength from './object.length'
 import objectDepth from './object.depth'
+import objectReduce from './object.reduce'
 
 export {
   objectDeepEntries,
@@ -18,4 +19,5 @@ export {
   objectLength,
   objectMap,
   objectSome,
+  objectReduce
 }
