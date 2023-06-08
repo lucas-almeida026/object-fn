@@ -2,9 +2,9 @@ const objectEvery = <InputType extends object>(
   object: InputType,
   fn: (
     key: keyof InputType,
-    value: any,
+    value: InputType[keyof InputType],
     index: number,
-    entries: [string, any][]
+    entries: [string, InputType[keyof InputType]][]
   ) => boolean
 ) => {
   const entries = Object.entries(object)

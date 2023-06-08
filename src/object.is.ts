@@ -1,3 +1,3 @@
-const objectIs = (val: any) => val instanceof Object && !(val instanceof Array)
+const objectIs = (val: any) => val instanceof Object && !(Array.isArray(val))
 
 export default objectIs

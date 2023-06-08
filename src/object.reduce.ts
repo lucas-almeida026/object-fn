@@ -1,12 +1,12 @@
-const objectReduce = <InputType extends object, OutputType extends object>(
+const objectReduce = <InputType extends object, OutputType>(
   object: InputType, 
   fn: (
     previousValue: OutputType, 
     key: string, 
-    value: any,
+    value: InputType[keyof InputType],
     index: number,
-    entries: [string, any][]
-  ) => any,
+    entries: [string, InputType[keyof InputType]][]
+  ) => OutputType,
   initialValue: OutputType
 ): OutputType => {
   const entries = Object.entries(object)

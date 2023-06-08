@@ -212,7 +212,9 @@ fromDeepEntries(t) // 👉 { a: 'a', b: { c: 'c' } }
 ```
 
 ## CHANGE LOG
+- v3.0.0 | 2023-06-08:
+  - Types update: use `unkown` instead of `any`; properly inver values and entries param for param function when possible; fixing max-depth counter
 - v2.1.0 | 2023-01-10 :
-  - Reexport `objectReduce` fn
+  - Export `objectReduce` fn
 - v2.0.0 | 2022-10-12 :
   - Change folder structure (rm lib folder from release)

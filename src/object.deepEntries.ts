@@ -1,13 +1,18 @@
 import objectIs from './object.is'
 
-let counter = 0
-const objectDeepEntries = (o: object): any[] => {
-  if(counter++ >= 500){
-    console.warn('[OBJECT.DEEP_ENTRIES]: maximum update depth exceeded')
+const objectDeepEntriesRec = (o: object, count = 0): unknown[] => {
+  if (count >= 500) {
+    console.warn('[OBJECT.DEEP_ENTRIES]: maximum recursive depth exceeded')
     return []
   }
   const entries = Object.entries(o)
-  return entries.map(([key, value]) => ([key, (objectIs(value) ? [ ...objectDeepEntries(value)] : value)]))
+  return entries.map(
+    ([key, value]) =>
+      ([key, (objectIs(value) ? [ ...objectDeepEntriesRec(value, count + 1)] : value)])
+  )
 }
+
+const objectDeepEntries = (o: object) => objectDeepEntriesRec(o)
+
 
 export default objectDeepEntries

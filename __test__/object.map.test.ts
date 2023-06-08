@@ -6,7 +6,7 @@ describe('in object.map function', () => {
       a: '1',
       b: '2'
     }
-    const m = objectMap<typeof obj, any>(obj, (_, val) => parseInt(val))
+    const m = objectMap(obj, (_, val) => parseInt(val))
     expect(m.a).toBe(1)
     expect(m.b).toBe(2)
   })
